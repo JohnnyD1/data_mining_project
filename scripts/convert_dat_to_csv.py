@@ -8,8 +8,8 @@ def convert(dat_file):
 
         for line in dat_f:
             row = line.split(' ')
+            row[-1] = row[-1].strip()
             csv_writer.writerow(row)
-
 
 
 
