@@ -81,6 +81,9 @@ def run(csv_file):
     for features in label_features:
         df_final[features] = label_features[features]
 
+    # get rid of unnamed column
+    del df_final['Unnamed: 0']
+
     # write to csv
     name = csv_file.rsplit('.',1)[0]
     df_final.to_csv(name + "_proc.csv",index=False)
