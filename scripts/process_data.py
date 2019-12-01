@@ -14,7 +14,7 @@ def get_training_data(csv_path):
 def data_process(X, y):
     rfc = RandomForestClassifier(n_estimators=100)
     rfc.fit(X[:int(len(X)*0.7)], y[:int(len(y)*0.7)])
-    print(rfc.score(X[int(len(X)*0.3):], y[int(len(y)*0.3):]))
+    print(rfc.score(X[int(len(X)*0.7):], y[int(len(y)*0.7):]))
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
